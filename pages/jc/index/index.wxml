@@ -1,0 +1,107 @@
+<!--index.wxml-->
+<view class="container">
+<!--顶部系统提醒-->
+  <van-notice-bar wx:if="{{notice.show}}" uid="{{notice.id}}"  text="{{notice.text}}" url="{{notice.url}}" mode = "{{notice.mode}}" delay="{{notice.delay}}" speed="{{notice.speed}}"     color="{{notice.color}}" backgroundColor="{{notice.backgroundColor}}" />
+  <!--顶部banner-->
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{banner}}" wx:key="id">
+      <navigator url="/pages/building/building?id=12">
+      <image src="{{item.url}}" background-size="cover"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+ <view class="nav_list">
+      <navigator open-type="navigate" url="/pages/building/building">
+        <image src="/images/jc/xuqiu.png" class="nav_icon"/>
+        <view class="nav_text">发布需求</view>
+      </navigator>
+      <navigator open-type="navigate" url="/pages/building/building">
+        <image src="/images/jc/xundan.png" class="nav_icon"/>
+        <view class="nav_text">需求询单</view>
+      </navigator>
+      <navigator open-type="navigate" url="/pages/building/building">
+        <image src="/images/jc/jieguo.png" class="nav_icon"/>
+        <view class="nav_text">检测结果</view>
+      </navigator>
+      <navigator open-type="navigate" url="/pages/building/building">
+        <image src="/images/jc/search.png" class="nav_icon"/>
+        <view class="nav_text">服务查询</view>
+      </navigator>
+    </view>
+
+    <view class="jglist">
+      <view class="jg jgtitle">
+        <image src="/images/common/jg.png" class="jg_img"/>
+        <text class="jgname">看是否看见萨福sadf 克晶方dsfda梵蒂冈科</text>
+      </view>
+      <view class="jg">
+        <text class="jgaddr">山东济南市中区万达广场C座15层</text>
+      </view>
+      <view class="jg jgzizhi">
+        <image src="/images/jc/CAL_logo.png" class="jg_img_zizhi"/>
+        <image src="/images/jc/CMA_Logo.png" class="jg_img_zizhi"/>
+        <image src="/images/jc/CNAS_Logo.png" class="jg_img_zizhi"/>
+      </view>
+      <view class="jgitems">
+        <view class="jc_sel">
+          <icon class="weui-icon-checkbox_circle" type="circle" size="23" ></icon>
+        </view>
+        <view class="jc_content">
+          <text class="title">山东济南市中区万达广场C座15层121212122</text>
+          <text class="param">检查参数：山东济南市中区万达广场C座15层</text>
+          <text class="method">检测方法：山东济南市中区万达广场C座15层</text>
+        </view>
+        <view class="jc_price">￥19203.90</view>
+      </view>
+      <view class="jgitems">
+        <view class="jc_sel">
+          <icon class="weui-icon-checkbox_circle" type="circle" size="23" ></icon>
+        </view>
+        <view class="jc_content">
+          <text class="title">山东济南市中区万达广场C座15层121212122</text>
+          <text class="param">检查参数：山东济南市中区万达广场C座15层</text>
+          <text class="method">检测方法：山东济南市中区万达广场C座15层</text>
+        </view>
+        <view class="jc_price">￥19203.90</view>
+      </view>
+    </view>
+
+    <view class="jglist">
+      <view class="jg jgtitle">
+        <image src="/images/common/jg.png" class="jg_img"/>
+        <text class="jgname">看是否看见萨福sadf 克晶方dsfda梵蒂冈科</text>
+      </view>
+      <view class="jg">
+        <text class="jgaddr">山东济南市中区万达广场C座15层</text>
+      </view>
+      <view class="jg jgzizhi">
+        <image src="/images/jc/CAL_logo.png" class="jg_img_zizhi"/>
+        <image src="/images/jc/CMA_Logo.png" class="jg_img_zizhi"/>
+        <image src="/images/jc/CNAS_Logo.png" class="jg_img_zizhi"/>
+      </view>
+      <view class="jgitems">
+        <view class="jc_sel">
+          <icon class="weui-icon-checkbox_circle" type="circle" size="23" ></icon>
+        </view>
+        <view class="jc_content">
+          <text class="title">山东济南市中区万达广场C座15层121212122</text>
+          <text class="param">检查参数：山东济南市中区万达广场C座15层</text>
+          <text class="method">检测方法：山东济南市中区万达广场C座15层</text>
+        </view>
+        <view class="jc_price">￥19203.90</view>
+      </view>
+      <view class="jgitems">
+        <view class="jc_sel">
+          <icon class="weui-icon-checkbox_circle" type="circle" size="23" ></icon>
+        </view>
+        <view class="jc_content">
+          <text class="title">山东济南市中区万达广场C座15层121212122</text>
+          <text class="param">检查参数：山东济南市中区万达广场C座15层</text>
+          <text class="method">检测方法：山东济南市中区万达广场C座15层</text>
+        </view>
+        <view class="jc_price">￥19203.90</view>
+      </view>
+    </view>
+    
+   
+</view>

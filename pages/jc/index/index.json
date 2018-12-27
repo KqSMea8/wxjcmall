@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "检测",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "van-notice-bar": "/components/notice-bar/index"
+  }
+}

@@ -1,0 +1,76 @@
+.login_hd {
+  color: #404040;
+  font-size: 26rpx;
+  padding: 17rpx 50rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.login_hd .logotext {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.login_hd .logo {
+  height: 180rpx;
+  margin: 0 auto;
+  width: 180rpx;
+  margin-bottom: 14rpx;
+  display: block;
+}
+
+.login_hd .appname {
+  font-size: 36rpx;
+}
+
+.wx-login-btn {
+  margin: 60rpx 0 40rpx 0;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  border-radius: 6rpx;
+  width: 90%;
+  color: #fff;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: flex;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin-left: 5%;
+  text-align: center;
+  /* padding-left: -5rpx; */
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  letter-spacing: 3rpx;
+}
+
+.account-login-btn {
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 30rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: flex;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  padding: 0;
+  margin-left: 5%;
+  text-align: center;
+  /* padding-left: -5rpx; */
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  letter-spacing: 3rpx;
+  background-image: linear-gradient(to right, #9a9ba1 0%, #9a9ba1 100%);
+}

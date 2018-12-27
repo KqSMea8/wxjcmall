@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="page__hd login_hd">
+    <view class="logotext">
+      <image src="/images/common/logo.png" class="logo" />
+      <text class="appname">{{appName}}</text>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="container">
+      <button type="primary" open-type="getUserInfo" class="wx-login-btn" bindgetuserinfo="wxLogin">微信登录</button>
+      <!-- <button type="primary" class="account-login-btn" bindtap="accountLogin">账号登录</button> -->
+    </view>
+  </view>
+  <view class="weui-footer">
+    <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">{{copyComp}}</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2019</view>
+  </view>
+</view>

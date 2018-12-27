@@ -1,0 +1,12 @@
+@import "../../../lib/wxParse/wxParse.wxss";
+.title {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  padding:0rpx 15rpx;
+}
+
+.time {
+  line-height: 20px;
+  text-align: center;
+}
