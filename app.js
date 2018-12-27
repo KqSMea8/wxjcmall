@@ -15,7 +15,7 @@ App({
     //       }
     //     }
     //   })
-    // })
+    // });
   },
   onShow: function(options) {
     user.checkLogin().then(res => {
