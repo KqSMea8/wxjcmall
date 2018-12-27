@@ -22,7 +22,7 @@ function checkSession() {
 }
 
 /**
- * Promise封装wx.login
+ * Promise封装wx.login 
  */
 function login() {
   return new Promise(function(resolve, reject) {
