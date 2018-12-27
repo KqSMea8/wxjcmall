@@ -28,6 +28,7 @@ Page({
 
   },
   wxLogin: function(e) {
+    //用户未授权
     if (e.detail.userInfo == undefined) {
       app.globalData.hasLogin = false;
       util.showErrorToast('微信登录失败');
