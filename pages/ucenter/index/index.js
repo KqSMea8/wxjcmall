@@ -204,12 +204,16 @@ Page({
           return;
         }
 
-        util.request(api.AuthLogout, {}, 'POST');
+        //util.request(api.AuthLogout, {}, 'POST');
         app.globalData.hasLogin = false;
         wx.removeStorageSync('token');
         wx.removeStorageSync('userInfo');
-        wx.reLaunch({
-          url: '/pages/index/index'
+        app.setData({
+          userInfo: {},
+          hasLogin: false
+        });
+        wx.switchTab({
+          url: '/pages/jc/index/index',
         });
       }
     })

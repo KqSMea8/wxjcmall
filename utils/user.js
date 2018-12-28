@@ -45,19 +45,36 @@ function login() {
  * 调用微信登录
  */
 function loginByWeixin(userInfo) {
-
   return new Promise(function(resolve, reject) {
     return login().then((res) => {
       //登录远程服务器
-      util.request(api.AuthLoginByWeixin, {
-        code: res.code,
-        userInfo: userInfo
-      }, 'POST').then(res => {
-        console.log(res);
+      userInfo.code = res.code;
+      util.request(api.AuthLoginByWeixin, userInfo, 'POST').then(res => {
         if (res.errno === 0) {
           //存储用户信息
           wx.setStorageSync('userInfo', userInfo);
           wx.setStorageSync('token', res.token);
+          if (res.isGetunionId){
+            console.log('get unionid')
+            wx.getUserInfo({
+              withCredentials: true,
+              success(res) {
+                if (res.errMsg == "getUserInfo:ok"){
+                  var param = {};
+                  param.encryptedData = res.encryptedData;
+                  param.iv = res.iv;
+                  param.openid = wx.getStorageSync('token');
+                  util.request(api.GetWxUserUnionId, param, 'POST').then(res => {
+                    console.log('Save UnionId OK.');
+                    resolve(res);
+                  }).catch((err) => {
+                    reject(err);
+                  });
+                }
+                
+              }
+            })
+          }
           resolve(res);
         } else {
           reject(res);

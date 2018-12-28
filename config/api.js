@@ -1,8 +1,13 @@
 // 以下是业务服务器API地址
-var WxApiRoot = 'http://localhost:8080/jcmall/wxapi/';
+ var WxApiRoot = 'http://localhost:8080/jcmall/wxapi/';
+//var WxApiRoot = 'https://www.appdev.top/wxapi/';
 
 module.exports = {
+  AppAbout: WxApiRoot + 'sys/about.go', //系统介绍
   AuthLoginByWeixin: WxApiRoot + 'auth/login_by_weixin.go', //微信登录
+  GetWxUserUnionId: WxApiRoot + 'auth/saveUserUnionId.go', //微信用户唯一标示保存
+
+  JcAds: WxApiRoot + 'jc/getJdList.go', //广告
 
   GoodsCount: WxApiRoot + 'goods/count', //统计商品总数
   GoodsList: WxApiRoot + 'goods/list', //获得商品列表

@@ -106,14 +106,15 @@ page {
 }
 
 .user_column_item_badge {
-  height: 28rpx;
-  width: 28rpx;
+  height: 38rpx;
+  width: 38rpx;
   position: absolute;
-  background: #b4282d;
+  background: #e70008;
   color: #fff;
   border-radius: 50%;
   margin-top: 20rpx;
   margin-left: 40rpx;
+  font-size: 10px;
 }
 
 .user_column_item_image {

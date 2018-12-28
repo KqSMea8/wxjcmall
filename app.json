@@ -2,9 +2,12 @@
   "pages": [
     "pages/jc/index/index",
     "pages/jc/sysinfo/index",
+    "pages/jc/adDetails/index",
     "pages/building/building",
     "pages/ucenter/index/index",
-    "pages/auth/login/login"
+    "pages/auth/login/login",
+    "pages/ucenter/orderJc/order",
+    "pages/about/about"
   ],
   "window": {
     "navigationBarTitleText": "简测",

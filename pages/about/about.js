@@ -12,12 +12,11 @@ Page({
   data: {
     load_statue: true,
     shopInfo: {
-      name: 'litemall',
-      address: 'https://github.com/linlinjava/litemall',
-      latitude: 31.201900,
-      longitude: 121.587839,
-      linkPhone: '021-xxxx-xxxx',
-      qqNumber: '738696120'
+      name: '检测',
+      address: '',
+      latitude: 0,
+      longitude: 0,
+      linkPhone: ''
     },
   },
 
@@ -25,7 +24,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    let that = this;
+    util.request(api.AppAbout, {}, 'POST').then(function (res) {
+      that.setData({
+        shopInfo: res
+      });
+    });
   },
 
   showLocation: function (e) {

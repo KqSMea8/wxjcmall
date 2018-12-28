@@ -46,7 +46,7 @@ function request(url, data = {}, method = "GET") {
             }
             // 切换到登录页面
             wx.navigateTo({
-              url: '/pages/jc/index/index'
+              url: '/pages/auth/login/login'
             });
           } else {
             resolve(res.data);

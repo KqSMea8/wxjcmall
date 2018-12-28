@@ -7,7 +7,7 @@ const app = getApp();
 Page({
   data: {
     notice:{
-      show:false,
+      show:true,
       id:'sdfsafsafsafd',
       text:'检测服务，商城服务，需求发布，需求询单等功能,欢迎。。',
       mode:'link',//closeable link
@@ -31,14 +31,12 @@ Page({
 
   getJcAdData: function() {
     let that = this;
-
-    that.setData({
-      banner: [
-        { "id": 1, "name": "合作 谁是你的菜", "link": "", "url": "http://yanxuan.nosdn.127.net/65091eebc48899298171c2eb6696fe27.jpg", "position": 1, "content": "合作 谁是你的菜", "enabled": true, "addTime": "2018-02-01 00:00:00", "updateTime": "2018-02-01 00:00:00", "deleted": false }, 
-        { "id": 2, "name": "活动 美食节", "link": "", "url": "http://yanxuan.nosdn.127.net/bff2e49136fcef1fd829f5036e07f116.jpg", "position": 1, "content": "活动 美食节", "enabled": true, "addTime": "2018-02-01 00:00:00", "updateTime": "2018-02-01 00:00:00", "deleted": false }, 
-        { "id": 3, "name": "活动 母亲节", "link": "", "url": "http://yanxuan.nosdn.127.net/8e50c65fda145e6dd1bf4fb7ee0fcecc.jpg", "position": 1, "content": "活动 母亲节5", "enabled": true, "addTime": "2018-02-01 00:00:00", "updateTime": "2018-02-01 00:00:00", "deleted": false }]
+    util.request(api.JcAds, {}, 'POST').then(function (res) {
+      console.log(res)
+      that.setData({
+        banner: res
+      });
     });
-
   },
   onLoad: function(options) {
     console.log(options);
